@@ -1,0 +1,441 @@
+@font-face {
+    font-family: "TTLakes-Regular";
+    src: url("src/fonts/TTLakes/TTLakes-Regular.ttf");
+}
+
+@font-face {
+    font-family: "TTLakes-Bold";
+    src: url("src/fonts/TTLakes/TTLakes-Bold.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: TTLakes-Regular, SansSerif, serif;
+    box-sizing: border-box;
+}
+
+.nav-center, .title--visible, .about__addInfo--visible {
+    display: none;
+    visibility: hidden;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.nav--underline-light-blue {
+    border-bottom: 1px solid #D9FFF5;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    flex-basis: 150px;
+    justify-content: space-between;
+}
+
+.nav-left:first-child {
+    margin-left: 16px;
+}
+
+.nav-right {
+    flex-basis: 100px;
+    padding: 23px 0;
+    justify-content: space-between;
+}
+
+.nav-right:last-child {
+    margin-right: 16px;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    background: #FF3E79 no-repeat 50% 50%;
+    border-radius: 50%;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    transition: opacity .4s;
+}
+
+.nav-icon:hover {
+    opacity:1;
+}
+
+.nav-icon--call {
+    background-image: url("src/images/call.svg");
+}
+
+.nav-icon--profile {
+    background-image: url("src/images/profile.svg");
+}
+
+.nav-icon--menu {
+    background-image: url("src/images/menu.svg");
+}
+
+.nav-icon--repair {
+    background-image: url("src/images/repair.svg");
+}
+
+.nav-icon--checkstatus {
+    background-image: url("src/images/checkstatus.svg");
+}
+
+.nav-icon--chat {
+    background-image: url("src/images/chat.svg");
+}
+
+.nav-icon--menu:after {
+    content: '';
+    position: absolute;
+    left: 180px;
+    background: #EAEAEA;
+    border-radius: 1px;
+    border: 1px solid #EAEAEA;
+    width: 0;
+    height: 30px;
+}
+
+.nav-icon:active, .nav-icon:focus {
+    outline: none;
+}
+
+.content {
+    background: #F8F8F8;
+}
+
+.content__title {
+    font-family: TTLakes-Bold, serif;
+    padding: 24px 0 0 0;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+}
+
+.content__title:before {
+    content: '';
+    width: 2px;
+    height: 40px;
+    border: 2px solid #41F6D7;
+    margin-right: 12px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.services {
+    display: flex;
+    list-style: none;
+    white-space: nowrap;
+    overflow: scroll;
+
+}
+
+.services__item {
+    padding: 8px 12px;
+    margin-left: 16px;
+    margin-top: 2%;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #7E7E82;
+    box-sizing: border-box;
+    border: 2px solid #F8F8F8;
+
+
+}
+
+.services__link {
+    text-decoration: none;
+    color: #7E7E82;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+.services__link:focus{
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-left: -14px;
+    margin-right: -14px;
+
+}
+.services__link:hover {
+    padding: 8px 12px;
+    background: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-left: -14px;
+    margin-right: -14px;
+
+}
+
+.content__description {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.content__about {
+    padding: 0 16px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.content__readMore {
+    padding-left: 2%;
+    padding-top: 4%;
+    font-family: TTLakes-Regular, serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    cursor: pointer;
+}
+
+.content__readMore:before {
+    content: url("src/images/icon.png");
+    cursor: pointer;
+    margin-right: 4%;
+}
+
+.content__image {
+    margin-right: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+
+}
+.content__addInfo--visible{
+    display: none;
+
+}
+@media screen and (max-width: 319px) {
+    .nav-icon--menu:after {
+        content: none;
+    }
+}
+
+@media screen and (min-width: 767px) {
+
+    .nav-left {
+        flex-basis: 176px;
+    }
+
+    .nav-left:first-child {
+        margin-left: 24px;
+    }
+
+    .nav-right:last-child {
+        margin-right: 40px;
+    }
+
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        visibility: visible;
+        margin-left: auto;
+    }
+
+    .nav-center .nav-icon {
+        margin-right: 16px
+    }
+
+    .nav-right .nav-icon {
+        margin-left: 16px
+    }
+
+    .title:before {
+        margin-right: 20px;
+    }
+
+
+    .services__item {
+        margin-left: 0;
+        padding: 6px 12px;
+    }
+
+    .services__item:first-child {
+        margin-left: 24px;
+    }
+
+    .content__description {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .content__about {
+        padding-right: 30px;
+        padding-left: 24px;
+        padding-top: 12px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+    }
+
+    .content__addInfo--visible {
+        display: block;
+        visibility: visible;
+        padding-top: 1rem;
+    }
+
+    .content__image {
+        border-radius: 5px;
+        background: #F8F8F8;
+        width: 100%;
+
+        margin-top: 12px;
+    }
+
+    .nav-icon--menu:after {
+        content: none;
+    }
+
+    .nav-icon--menu:after {
+        content: '';
+        position: absolute;
+        left: 84px;
+        background: #EAEAEA;
+        border-radius: 1px;
+        border: 1px solid #EAEAEA;
+        width: 0;
+        height: 30px;
+
+    }
+
+    .nav-icon--repair:after {
+        content: '';
+        position: absolute;
+        right: 151px;
+        background: #EAEAEA;
+        border-radius: 1px;
+        border: 1px solid #EAEAEA;
+        width: 0;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 1119px) and (max-width: 1448px) {
+
+    .nav {
+        justify-content: flex-end;
+        background-color: #F8F8F8;
+        border: none;
+    }
+
+    .nav-left, .nav-center, .nav-icon--visible, .nav-icon--repair:after {
+        display: none;
+    }
+
+    .nav-right {
+        padding: 0;
+        flex-basis: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-right .nav-icon {
+        margin-left: -20px;
+    }
+    .nav-icon--checkstatus:before {
+        content: 'Статус ремонта';
+    }
+    .nav-icon--repair:before {
+        content: 'Оставить заявку';
+    }
+
+    .nav-icon--checkstatus:before,  .nav-icon--repair:before {
+        font-size: 16px;
+        color: #1B1C21;
+        margin-left: -185px;
+        font-weight: bold;
+    }
+
+
+    .nav-icon {
+        margin-top: 42px;
+    }
+
+    .content__title {
+        visibility: hidden;
+        display: none;
+        white-space: nowrap;
+    }
+
+    .title--visible {
+        display: block;
+        visibility: visible;
+        white-space: nowrap;
+        align-self: center;
+        padding-top: 42px;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+        font-family: TTLakes-Bold, serif;
+        color: #1B1C21;
+        flex-basis: 60%;
+    }
+
+    .title--visible:before {
+        content: '';
+        width: 2px;
+        height: 40px;
+        border: 2px solid #41F6D7;
+        margin-right: 28px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        overflow: visible;
+        margin-left: 32px;
+    }
+    .services__item {
+        padding: 6px 22px 6px 22px;
+        letter-spacing: -0.2px;
+        margin-top: 16px;
+        margin-bottom: 6px;
+    }
+
+    .services__item:first-child {
+        margin-left: 0;
+    }
+
+    .content__about {
+        padding: 20px 6px 20px 32px;
+        font-size: 14px;
+    }
+
+    .content__addInfo--visible::after {
+        content: ', что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.';
+    }
+
+    .content__image {
+        min-width: 530px;
+        min-height: 320px;
+        margin: 20px 40px 20px 0;
+        padding: 0;
+        border-radius: 10px;
+    }
+
+
+}
+
