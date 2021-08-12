@@ -13,6 +13,9 @@
     margin: 0;
     font-family: TTLakes-Regular, SansSerif, serif;
     box-sizing: border-box;
+  }
+.body{
+    max-width: 1300px;
 }
 
 .nav-center, .title--visible, .about__addInfo--visible {
@@ -138,7 +141,8 @@
     display: flex;
     list-style: none;
     white-space: nowrap;
-    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
 
 }
 
@@ -159,7 +163,7 @@
 .services__link {
     text-decoration: none;
     color: #7E7E82;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 
 }
 .services__link:focus{
@@ -194,7 +198,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width:5;
 }
 
 .content__readMore {
@@ -334,7 +338,7 @@
     }
 }
 
-@media screen and (min-width: 1119px)   {
+@media screen and (min-width: 1119px){
 
     .nav {
         justify-content: flex-end;
